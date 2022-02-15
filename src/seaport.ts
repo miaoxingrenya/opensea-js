@@ -4151,7 +4151,8 @@ export class OpenSeaPort {
         accountAddress,
         matchMetadata: metadata,
       });
-
+      let time9= new Date().getTime()
+      console.log('钱包取消耗时:'+(time9-time7)/1000+'s')
       throw new Error(
         `Failed to authorize transaction: "${
           error instanceof Error && error.message
